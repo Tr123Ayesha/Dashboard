@@ -241,21 +241,22 @@ export default function PersistentDrawerLeft({children}) {
         open={open}
         onClose={isMobile ? handleDrawerClose : undefined}
       >
-        <DrawerHeader>
+        <DrawerHeader sx={{  paddingTop:'50px',  justifyContent: 'center', paddingBottom:'100px'}}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
+          <img  src={Logo} alt="Logo" />
+      
         </DrawerHeader>
-        <Divider />
+
         <div>
-      <img style={{ padding: '50px 51px 100px 51px' }} src={Logo} alt="Logo" />
-      <List sx={{ display: 'flex', flexDirection: 'column', padding: '0 19px', gap: '30px' }}>
+     <List sx={{ display: 'flex', flexDirection: 'column', padding: '0 19px', gap: '30px' }}>
         {renderNavItems(NAVIGATION)}
       </List>
     </div>
       </Drawer>
-      <Main open={open && !isMobile} isMobile={isMobile}>
-        <DrawerHeader />
+      <Main sx={{paddingTop:'104px'}} open={open && !isMobile} isMobile={isMobile}>
+        {/* <DrawerHeader /> */}
        {children}
       </Main>
     </Box>

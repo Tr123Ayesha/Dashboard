@@ -1,0 +1,35 @@
+.History{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+}
+.ExportPayOutHistory{
+    margin-top: 40px;
+    background-color: rgba(0, 208, 89, 1);
+    border-radius: 100px;
+    color: rgba(3, 3, 3, 1);
+    font-family: 'Nexa';
+    font-weight:800;
+    font-size: 14px;
+    line-height: 19.6px;
+    width: 165px;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    height: 44px;
+    border: none;
+    margin-bottom: 60px !important;
+ 
+}
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width: 425px) {
+    .ExportPayOutHistory {
+        width: 96% !important;
+    }
+  }
