@@ -36,6 +36,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open, isMobile }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
+    width: '100%',
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -255,7 +256,7 @@ export default function PersistentDrawerLeft({children}) {
       </List>
     </div>
       </Drawer>
-      <Main sx={{paddingTop:'104px' ,width:  `calc(100% - ${drawerWidth}px)` }} open={open && !isMobile} isMobile={isMobile}>
+      <Main sx={{overflow: 'auto', paddingTop:'104px' ,    width: '80%'}} open={open && !isMobile} isMobile={isMobile}>
         {/* <DrawerHeader /> */}
        {children}
       </Main>

@@ -28,7 +28,7 @@ function createData(name, amount, method, accountName, accNo, City, date) {
 
 export default function Dashboard() {
   return (
-    <div style={{width:'100%'}} >
+    <div  >
     <TableContainer  sx={{ overflowX:'auto', minWidth: 650, background:" linear-gradient(360deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%)",
     }}component={Paper}>
       <Table sx={{ minWidth: 650 , }} aria-label="simple table">
