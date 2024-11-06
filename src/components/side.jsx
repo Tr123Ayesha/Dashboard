@@ -197,7 +197,7 @@ export default function PersistentDrawerLeft({children}) {
     });
   };
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: '100vh' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open && !isMobile}
       sx={{
@@ -255,7 +255,7 @@ export default function PersistentDrawerLeft({children}) {
       </List>
     </div>
       </Drawer>
-      <Main sx={{paddingTop:'104px'}} open={open && !isMobile} isMobile={isMobile}>
+      <Main sx={{paddingTop:'104px',width: { sm: `calc(100% - ${drawerWidth}px)` }}} open={open && !isMobile} isMobile={isMobile}>
         {/* <DrawerHeader /> */}
        {children}
       </Main>

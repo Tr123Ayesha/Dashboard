@@ -28,8 +28,8 @@ function createData(name, amount, method, accountName, accNo, City, date) {
 
 export default function Dashboard() {
   return (
-    <>
-    <TableContainer  sx={{  background:" linear-gradient(360deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%)",
+    <div style={{width:'100%'}} >
+    <TableContainer  sx={{ overflowX:'auto', minWidth: 650, background:" linear-gradient(360deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%)",
     }}component={Paper}>
       <Table sx={{ minWidth: 650 , }} aria-label="simple table">
         <TableHead>
@@ -73,6 +73,6 @@ export default function Dashboard() {
     <button className='ExportPayOutHistory'>
     Export
     </button>
-    </>
+    </div>
   );
 }
