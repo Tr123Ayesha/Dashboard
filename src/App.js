@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Sidebar from './components/sidebar';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+const DashboardLayout = () => (
+  <div>
+    <Sidebar showSidebar={true} style={{ overflowX: "hidden" }}>
+      <Outlet /> {/* Nested routes will render here */}
+    </Sidebar>
+  </div>
+);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+<Router>
+    <Routes>
+       <Route path="/" element={<DashboardLayout />}>
+        {/* <Route path="Users" element={<PropertyAuthStep1 />} />   */}
+        {/* <Route path="kyc-approval" element={<KycApprovals />} /> */}
+        </Route>
+       </Routes>
+       </Router>
+   </div>
   );
 }
 
