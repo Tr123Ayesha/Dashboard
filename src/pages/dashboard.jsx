@@ -28,10 +28,10 @@ function createData(name, amount, method, accountName, accNo, City, date) {
 
 export default function Dashboard() {
   return (
-    <div  >
-    <TableContainer  sx={{ overflowX:'auto', minWidth: 650, background:" linear-gradient(360deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%)",
+    <div style={{display:'flex' , flexDirection :'column'}} >
+    <TableContainer  sx={{ overflowX:'auto',  background:" linear-gradient(360deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%)",
     }}component={Paper}>
-      <Table sx={{ minWidth: 650 , }} aria-label="simple table">
+      <Table sx={{ }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell align='left' sx={{fontFamily:"Nexa", fontSize:'14px', fontWeight:'800', color:'rgba(143, 143, 143, 1)', lineHeight:'20.3px',borderBottom:'1px solid rgba(41, 41, 41, 1)', paddingTop:'17.5px', paddingBottom:'17.5px', paddingLeft:'20px' , width:'158px'}}>Name </TableCell>
